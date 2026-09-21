@@ -1,54 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Digital</title>
+    <title>Cálculo de Consumo</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="/imgs/background.jpg" type="image/x-icon" />
 </head>
 <body>
-    
     <div class="central">
-        <h1>Painel Digital</h1>
-
-        <div class="relogio">
-            <span id="horas">00</span>
-            <span id="minutos">00</span>
-            <span id="segundo">00</span>
-        </div>
-
-        <div class="data">
-            <span id="dia">00</span>
-            <span>/</span>
-            <span id="mes">00</span>
-            <span>/</span>
-            <span id="ano">0000</span> 
-        </div>
-
-
-        <div class="data2">
-            <div class="dia">
-                <h2>Dia</h2>
-                <span id="dia2">00</span>
-            </div>
-            <div class="mes">
-                <h2>Mês</h2>
-                <span id="mes2">00</span>
-            </div>
-            <div class="ano">
-                <h2>Ano</h2>
-                <span id="ano2">0000</span>
+        <div class="sistema">
+            <input id="pergunta1" type="text" placeholder="Digite a distância da viagem">
+            <input id="pergunta2" type="text" placeholder="Digite o consumo do veículo">
+            <input id="pergunta3" type="text" placeholder="Digite o preço do combustível">
+            <div class="botoes">
+                <button id="btn1">Calcular</button>
+                <button id="btn2">
+                    <i class="icone">b</i>
+                    
+                </button>
             </div>
         </div>
-
-        <div class="mensagem" id="mensagem"></div>
-
-        <div class="status">
-            <span class="status-bolinha" id="status-bolinha"></span>
-            <span>PAINEL ATUALIZADO AUTOMATICAMENTE</span>
+        <div class="resposta">
+            <span id="resposta1"></span>
         </div>
-
     </div>
 
     <script src="js/script.js"></script>

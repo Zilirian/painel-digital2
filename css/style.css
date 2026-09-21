@@ -1,4 +1,9 @@
 @font-face {
+    font-family: icon;
+    src: url(/fonts/Byom-Icons-Trial.ttf);
+}
+
+@font-face {
     font-family: sci-fi;
     src: url(/fonts/Ethnocentric-Regular.otf);
 }
@@ -6,7 +11,6 @@
     font-family: sci-fi2;
     src: url(/fonts/Dune_Rise.otf);
 }
-
 @font-face {
     font-family: sci-fi3;
     src: url(/fonts/);
@@ -20,6 +24,11 @@
     src: url(/fonts/KGPerfectPenmanship.otf);
 }
 
+.icone {
+    font-family: 'icon';
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +37,8 @@
 }
 
 body {
-    background-image: url(/imgs/background.jpg);
+    background-image: url(/imgs/background2.jpg);
+    background-color: #0b132b;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -48,129 +58,120 @@ body {
     border-radius: 24px;
     box-shadow: 0 12px 40px rgba(230, 222, 222, 0.623), inset 0 0 0 1.4px rgba(239, 242, 243, 0.459);
     text-align: center;
-    width: 500px;
+    width: 900px;
+    max-width: 90%;
 }
 
-h1 {
-    font-size: 5.2rem;
-    margin-bottom: 30px;
-    color: #bee0f3;
-    text-shadow: 0 2px 8px rgba(16, 113, 192, 0.575), -1px -1px 0 rgba(66, 80, 112, 0.795);
-    font-family: normal1;
-}
-
-.relogio {
-    font-size: 4.2rem;
-    font-weight: bold;
-    color: #38bdf8;
-    margin-bottom: 15px;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4), 0 2px 10px rgba(0, 0, 0, 0.6);
-    
-}
-
-.relogio span:not(:last-child)::after {
-    content: ":";
-    margin: 0 4px;
-}
-
-.data {
-    font-size: 1.6rem;
-    color: #7dd3fc;
-    margin-bottom: 30px;
-    font-weight: 500;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    
-}
-
-.data2 {
+.sistema {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    flex-direction: column;
+    gap: 18px;
     margin-bottom: 30px;
 }
 
-.data2 > div {
-    background-color: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(186, 230, 253, 0.2);
-    border-radius: 16px;
-    padding: 18px 10px;
-    flex: 1;
-}
-
-.data2 h2 {
-    font-size: 0.95rem;
-    color: #93c5fd;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.data2 span {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e0f2fe;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    
-}
-
-.mensagem {
-    font-size: 4.3rem;
-    font-weight: 500;
-    font-family: normal1;
-    color: #e0f2fe;
-    padding: 16px;
+.sistema input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(111, 196, 241, 0.5);
     border-radius: 12px;
-    background-color: rgba(14, 116, 144, 0.45);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    color: #f0f9ff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.status {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 0.85rem;
+.sistema input::placeholder {
+    color: rgba(224, 242, 254, 0.5);
+}
+
+.sistema input:focus {
+    border-color: #38f862;
+    background: rgba(15, 23, 42, 0.85);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#btn1 {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(23, 204, 99, 0.8), rgba(144, 197, 226, 0.8));
+    border: 1px solid rgba(186, 230, 253, 0.8);
+    border-radius: 12px;
+    color: #051a01;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #38bdf8;
-    margin-top: 25px;
-    white-space: nowrap;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-}
-
-.status-bolinha {
-    width: 10px;
-    height: 10px;
-    background-color: #c0e7f8;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 0 10px #1e8bb9;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.piscar {
-    opacity: 0.2;
-}
-
-.relogio,
-.data,
-.data2 span {
     font-family: sci-fi;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
 }
 
+#btn1:hover {
+    background: linear-gradient(135deg, rgba(28, 238, 91, 0.603), rgba(159, 253, 104, 0.555));
+    box-shadow: 0 6px 20px rgba(14, 201, 86, 0.678);
+    transform: translateY(-2px);
+}
 
-#dia,
-#mes,
-#ano,
-#dia2,
-#mes2,
-#ano2 {
+#btn1:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(14, 165, 233, 0.4);
+}
+
+.resposta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: rgba(6, 10, 19, 0.747);
+    border: 1px solid rgba(111, 196, 241, 0.3);
+    border-radius: 16px;
+}
+
+.resposta span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6ee482;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+    word-break: break-word;
+}
+
+#btn2 {
+    width: 8%;
+    min-height: 3.2rem;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(23, 204, 99, 0.8), rgba(144, 197, 226, 0.8));
+    border: 1px solid rgba(186, 230, 253, 0.8);
+    border-radius: 12px;
+    color: #051a01;
+    font-size: 1.1rem;
+    font-weight: bolder;
     font-family: sci-fi;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
 }
 
-#horas,
-#minutos,
-#segundo {
-    font-family: sci-fi3;
+#btn2:hover {
+    background: linear-gradient(135deg, rgba(28, 238, 91, 0.603), rgba(159, 253, 104, 0.555));
+    box-shadow: 0 6px 20px rgba(14, 201, 86, 0.678);
+    transform: translateY(-2px);
+}
+
+#btn2:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(14, 165, 233, 0.4);
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 5px;
+    
 }

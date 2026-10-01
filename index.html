@@ -2,30 +2,35 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo de Consumo</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="imgs/icon.png">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Calculadora de Valor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
 </head>
 <body>
+    
     <div class="central">
         <div class="sistema">
-            <input id="pergunta1" type="text" placeholder="Digite a distância da viagem">
-            <input id="pergunta2" type="text" placeholder="Digite o consumo do veículo">
-            <input id="pergunta3" type="text" placeholder="Digite o preço do combustível">
-            <div class="botoes">
-                <button id="btn1">Calcular</button>
-                <button id="btn2">
-                    <i class="icone">b</i>
-                    
-                </button>
+            <div class="cabecalho">
+            <h1>CALCULADORA DE VALOR FINAL</h1>
+            <img src="imgs/icon.png">
+            </div>
+            <div class="perguntas">
+                <h2>Preço do produto(R$):</h2>
+                <input type="text" placeholder="Ex: 200" id="pergunta1">
+                <h2>Quantidade:</h2>
+                <input type="text" placeholder="Ex: 2" id="pergunta2">
+                <h2>Desconto(%):</h2>
+                <input type="text" placeholder="Ex: 20" id="pergunta3">
+            </div>
+            <button id="btn">Calcular Valor Final</button>
+            <div class="resposta">
+                <span id="resposta"></span>
             </div>
         </div>
-        <div class="resposta">
-            <span id="resposta1"></span>
-        </div>
+
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
